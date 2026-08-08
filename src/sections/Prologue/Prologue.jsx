@@ -16,7 +16,7 @@ export default function Prologue() {
     () => [
       "Oyee Bava...",
 
-      "This isn't just another website.",
+      "This isn't just a website.",
 
       "It's something I wanted to make with time, memories, and a lot of care.",
 
