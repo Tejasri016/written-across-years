@@ -1,0 +1,220 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    to bottom,
+    #fffcf8,
+    #faf4ea,
+    #f6ede1
+  );
+}
+
+/* Paper */
+
+.hero-paper {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.18;
+
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(231, 206, 168, 0.35),
+      transparent 40%
+    ),
+    linear-gradient(
+      #fffdf8,
+      #f6ede1
+    );
+
+  pointer-events: none;
+}
+
+/* Warm Light */
+
+.hero-light {
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  border-radius: 50%;
+
+  background: #f4d6a2;
+
+  filter: blur(140px);
+
+  opacity: 0.35;
+
+  animation: floatLight 12s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+/* Gold Ribbon */
+
+.hero-ribbon {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 3px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d2a96a,
+    transparent
+  );
+
+  opacity: 0.35;
+
+  pointer-events: none;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: 900px;
+
+  padding: 24px 24px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Book */
+
+.hero-book {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  filter:
+    drop-shadow(
+      0 25px 35px rgba(73, 52, 30, 0.12)
+    );
+}
+
+/* Subtitle */
+
+.hero-subtitle {
+  margin-top: 24px;
+  margin-bottom: 22px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+
+  color: #6e6358;
+}
+
+/* Button */
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 17px 34px;
+
+  border: 1px solid rgba(166, 125, 69, 0.5);
+
+  border-radius: 999px;
+
+  background: rgba(255, 250, 241, 0.75);
+
+  color: #80613d;
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+
+  box-shadow:
+    0 12px 30px rgba(157, 117, 65, 0.12);
+
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.hero-button:hover {
+  background: rgba(255, 252, 246, 0.95);
+
+  box-shadow:
+    0 16px 40px rgba(157, 117, 65, 0.2);
+}
+
+.hero-button:active {
+  transform: scale(0.97);
+}
+
+/* Light Animation */
+
+@keyframes floatLight {
+  0% {
+    transform: translate(-80px, -60px);
+  }
+
+  50% {
+    transform: translate(80px, 60px);
+  }
+
+  100% {
+    transform: translate(-80px, -60px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 30px 18px;
+  }
+
+  .hero-book {
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    margin-top: 28px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .hero-button {
+    padding: 16px 30px;
+  }
+}

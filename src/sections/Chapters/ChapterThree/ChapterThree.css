@@ -1,0 +1,256 @@
+.chapter-three {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 255, 255, 0.7),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #eeece7 0%,
+      #e5e3de 50%,
+      #dcdad5 100%
+    );
+
+  color: #403f3b;
+}
+
+/* Very subtle atmosphere */
+
+.chapter-three-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(207, 194, 169, 0.2);
+
+  filter: blur(120px);
+
+  top: 10%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* Falling leaf */
+
+.chapter-three-leaf {
+  position: absolute;
+
+  top: 13%;
+  right: 17%;
+
+  font-size: 2.4rem;
+
+  filter: grayscale(25%);
+
+  animation: slowLeaf 7s ease-in-out infinite;
+}
+
+@keyframes slowLeaf {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(8deg);
+  }
+
+  50% {
+    transform: translate(-25px, 80px) rotate(35deg);
+  }
+}
+
+/* Content */
+
+.chapter-three-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 720px;
+}
+
+/* Chapter number */
+
+.chapter-three-number {
+  margin-bottom: 25px;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 9px;
+
+  color: #858077;
+}
+
+/* Title */
+
+.chapter-three-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.9;
+
+  font-weight: 500;
+
+  color: #373633;
+}
+
+/* Small line */
+
+.chapter-three-line {
+  height: 1px;
+
+  margin: 40px auto;
+
+  background: #a99b84;
+}
+
+/* Story */
+
+.chapter-three-story {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: #77736d;
+
+  font-size: 1.12rem;
+
+  line-height: 2.1;
+}
+
+.chapter-three-story p {
+  margin-bottom: 25px;
+}
+
+/* First quiet line */
+
+.quiet-line {
+  font-family: "Caveat", cursive;
+
+  font-size: 2rem;
+
+  color: #8b8377;
+}
+
+/* Five years */
+
+.big-silence {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  line-height: 1;
+
+  color: #4b4944;
+
+  margin: 35px 0 40px !important;
+}
+
+/* Emotional line */
+
+.chapter-three-highlight {
+  margin-top: 45px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.6;
+
+  color: #625d55;
+}
+
+/* Button */
+
+.chapter-three-btn {
+  margin-top: 55px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 4px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #756b5c;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.chapter-three-btn:hover {
+  color: #4f483e;
+  gap: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .chapter-three {
+    padding: 80px 22px;
+  }
+
+  .chapter-three-title {
+    font-size: 4rem;
+  }
+
+  .chapter-three-story {
+    font-size: 1.03rem;
+    line-height: 1.95;
+  }
+
+  .chapter-three-highlight {
+    font-size: 1.35rem;
+  }
+
+  .chapter-three-leaf {
+    right: 8%;
+    top: 12%;
+    opacity: 0.35;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #b58a4f;
+  animation: chapterThreeCursorBlink 0.8s ease-in-out infinite;
+}
+
+@keyframes chapterThreeCursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

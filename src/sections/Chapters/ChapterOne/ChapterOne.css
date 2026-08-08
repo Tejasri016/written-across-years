@@ -1,0 +1,241 @@
+.chapter-one{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:80px 25px;
+
+background:
+
+linear-gradient(
+180deg,
+#FCF7F0,
+#F7EEDF
+);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.chapter-leaf{
+
+font-size:3rem;
+
+margin-bottom:25px;
+
+filter:
+drop-shadow(0 10px 15px rgba(0,0,0,.1));
+
+}
+
+
+
+.chapter-number{
+
+font-size:.8rem;
+
+letter-spacing:8px;
+
+color:#B18952;
+
+margin-bottom:25px;
+
+}
+
+
+
+.chapter-title{
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:
+clamp(3.5rem,7vw,6rem);
+
+line-height:1;
+
+font-weight:600;
+
+color:#2E2925;
+
+}
+
+
+
+.chapter-divider{
+
+margin:35px 0;
+
+color:#C89B5B;
+
+font-size:1.2rem;
+
+}
+
+
+
+.chapter-story{
+
+max-width:650px;
+
+font-size:1.25rem;
+
+line-height:2;
+
+color:#75695D;
+
+}
+
+
+.chapter-story p{
+
+margin-bottom:22px;
+
+}
+
+.special-line{
+
+font-family:"Caveat",cursive;
+
+font-size:2.2rem;
+
+color:#B18952;
+
+}
+
+.chapter-btn{
+
+margin-top:60px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+border:none;
+
+background:transparent;
+
+color:#A77D42;
+
+font-size:1rem;
+
+cursor:pointer;
+
+letter-spacing:1px;
+
+}
+
+.chapter-btn svg{
+
+animation:
+arrowMove 1.5s infinite;
+}
+
+@keyframes arrowMove{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(8px);
+
+}
+
+}
+
+.chapter-one::before{
+
+content:"";
+
+position:absolute;
+
+top:40px;
+
+left:40px;
+
+width:120px;
+
+height:120px;
+
+border-top:1px solid #D8BA88;
+
+border-left:1px solid #D8BA88;
+
+opacity:.5;
+
+}
+
+.chapter-one::after{
+
+content:"";
+
+position:absolute;
+
+bottom:40px;
+
+right:40px;
+
+width:120px;
+
+height:120px;
+
+border-bottom:1px solid #D8BA88;
+
+border-right:1px solid #D8BA88;
+
+opacity:.5;
+
+}
+
+@media(max-width:768px){
+
+.chapter-story{
+font-size:1.05rem;
+}
+
+.chapter-title{
+font-size: 3.5rem;
+}
+
+}
+
+/* Cinematic typing cursor */
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #b58a4f;
+  animation: chapterCursorBlink 0.8s ease-in-out infinite;
+}
+
+@keyframes chapterCursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

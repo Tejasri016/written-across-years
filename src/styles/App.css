@@ -1,0 +1,88 @@
+.story {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.story section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* CINEMATIC CHAPTER BUTTONS */
+
+.chapter-btn,
+.chapter-two-btn,
+.chapter-three-btn,
+.chapter-four-btn,
+.chapter-five-btn {
+  position: relative;
+  margin-top: 55px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 14px 6px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #8a6b43;
+  font-family: inherit;
+  font-size: 0.92rem;
+  letter-spacing: 0.8px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.4s ease,
+    letter-spacing 0.4s ease;
+}
+
+.chapter-btn::after,
+.chapter-two-btn::after,
+.chapter-three-btn::after,
+.chapter-four-btn::after,
+.chapter-five-btn::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #b68a4e;
+
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+}
+
+.chapter-btn:hover,
+.chapter-two-btn:hover,
+.chapter-three-btn:hover,
+.chapter-four-btn:hover,
+.chapter-five-btn:hover {
+  color: #b68a4e;
+  letter-spacing: 1.2px;
+}
+
+.chapter-btn:hover::after,
+.chapter-two-btn:hover::after,
+.chapter-three-btn:hover::after,
+.chapter-four-btn:hover::after,
+.chapter-five-btn:hover::after {
+  width: 100%;
+}
+
+.chapter-btn svg,
+.chapter-two-btn svg,
+.chapter-three-btn svg,
+.chapter-four-btn svg,
+.chapter-five-btn svg {
+  font-size: 0.72rem;
+}

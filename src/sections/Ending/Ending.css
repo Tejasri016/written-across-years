@@ -1,0 +1,1167 @@
+.ending {
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 249, 231, 0.95),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #2d2823 0%,
+      #211d19 100%
+    );
+
+  color: #fff;
+}
+
+/* Golden atmosphere */
+
+.ending-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(120px);
+}
+
+.ending-glow-one {
+  width: 550px;
+  height: 550px;
+
+  background: rgba(201, 155, 87, 0.16);
+
+  top: -180px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.ending-glow-two {
+  width: 400px;
+  height: 400px;
+
+  background: rgba(219, 178, 108, 0.08);
+
+  bottom: -180px;
+  right: -100px;
+}
+
+/* Content */
+
+.ending-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 800px;
+
+  width: 100%;
+}
+
+/* Small heading */
+
+.ending-small {
+  font-size: 0.72rem;
+
+  letter-spacing: 9px;
+
+  color: #c9a66d;
+
+  margin-bottom: 25px;
+}
+
+/* Symbol */
+
+.ending-symbol {
+  color: #d4ae70;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 25px;
+}
+
+/* Main title */
+
+.ending-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 9vw, 7.5rem);
+
+  line-height: 0.88;
+
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+
+  color: #fff8ed;
+
+  text-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Divider */
+
+.ending-divider {
+  width: 110px;
+
+  height: 1px;
+
+  background: #c69a5d;
+
+  margin: 42px auto;
+}
+
+/* Message */
+
+.ending-message {
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color: #c9c0b4;
+
+  margin-bottom: 25px;
+}
+
+/* Highlight */
+
+.ending-highlight {
+  font-family: "Caveat", cursive;
+
+  font-size: 2.7rem;
+
+  color: #d3ac6d;
+
+  margin-bottom: 35px;
+}
+
+/* Last message */
+
+.ending-last {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.35rem;
+
+  line-height: 1.7;
+
+  color: #ddd2c3;
+}
+
+/* Signature */
+
+.ending-signature {
+  margin-top: 55px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 1.7rem;
+
+  line-height: 1.35;
+
+  color: #bca990;
+}
+
+.ending-signature span {
+  color: #e0bd7d;
+
+  font-size: 2rem;
+}
+
+/* Bottom */
+
+.ending-bottom {
+  margin-top: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  opacity: 0.6;
+}
+
+.ending-bottom span {
+  font-size: 0.65rem;
+
+  letter-spacing: 6px;
+
+  color: #b9a486;
+}
+
+.ending-bottom i {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 0.95rem;
+
+  color: #8e8377;
+}
+
+/* Stars */
+
+.ending-star {
+  position: absolute;
+
+  z-index: 2;
+
+  color: #d2ab6d;
+
+  font-size: 1.5rem;
+}
+
+.star-one {
+  top: 23%;
+  left: 15%;
+}
+
+.star-two {
+  right: 14%;
+  bottom: 24%;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .ending {
+    padding: 80px 22px;
+  }
+
+  .ending-title {
+    font-size: 4.2rem;
+  }
+
+  .ending-message {
+    font-size: 1rem;
+  }
+
+  .ending-highlight {
+    font-size: 2.2rem;
+  }
+
+  .ending-last {
+    font-size: 1.15rem;
+  }
+
+  .star-one {
+    left: 7%;
+  }
+
+  .star-two {
+    right: 7%;
+  }
+}
+
+/* =========================================
+   CINEMATIC FINAL ATMOSPHERE
+========================================= */
+
+.ending {
+  isolation: isolate;
+}
+
+
+/* Make atmosphere feel alive */
+
+.ending-glow {
+  z-index: 0;
+  animation: endingGlowBreath 7s ease-in-out infinite;
+}
+
+.ending-glow-two {
+  animation-delay: 2s;
+}
+
+
+@keyframes endingGlowBreath {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: translateX(-50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
+
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.ending-particles {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+.ending-particles span {
+  position: absolute;
+
+  bottom: -30px;
+
+  color: rgba(210, 171, 109, 0.45);
+
+  font-size: 12px;
+
+  opacity: 0;
+
+  animation:
+    endingParticleFloat
+    var(--duration, 10s)
+    linear
+    infinite;
+
+  animation-delay: var(--delay, 0s);
+}
+
+
+/* Individual positions */
+
+.ending-particles span:nth-child(1) {
+  left: 7%;
+  --duration: 11s;
+  --delay: 0s;
+  font-size: 10px;
+}
+
+.ending-particles span:nth-child(2) {
+  left: 14%;
+  --duration: 14s;
+  --delay: 3s;
+  font-size: 7px;
+}
+
+.ending-particles span:nth-child(3) {
+  left: 22%;
+  --duration: 12s;
+  --delay: 5s;
+  font-size: 13px;
+}
+
+.ending-particles span:nth-child(4) {
+  left: 29%;
+  --duration: 15s;
+  --delay: 1s;
+  font-size: 6px;
+}
+
+.ending-particles span:nth-child(5) {
+  left: 38%;
+  --duration: 13s;
+  --delay: 7s;
+  font-size: 9px;
+}
+
+.ending-particles span:nth-child(6) {
+  left: 46%;
+  --duration: 10s;
+  --delay: 2s;
+  font-size: 6px;
+}
+
+.ending-particles span:nth-child(7) {
+  left: 55%;
+  --duration: 14s;
+  --delay: 6s;
+  font-size: 12px;
+}
+
+.ending-particles span:nth-child(8) {
+  left: 63%;
+  --duration: 12s;
+  --delay: 4s;
+  font-size: 7px;
+}
+
+.ending-particles span:nth-child(9) {
+  left: 71%;
+  --duration: 15s;
+  --delay: 8s;
+  font-size: 10px;
+}
+
+.ending-particles span:nth-child(10) {
+  left: 78%;
+  --duration: 11s;
+  --delay: 2s;
+  font-size: 6px;
+}
+
+.ending-particles span:nth-child(11) {
+  left: 84%;
+  --duration: 13s;
+  --delay: 5s;
+  font-size: 12px;
+}
+
+.ending-particles span:nth-child(12) {
+  left: 91%;
+  --duration: 16s;
+  --delay: 1s;
+  font-size: 6px;
+}
+
+.ending-particles span:nth-child(13) {
+  left: 18%;
+  --duration: 17s;
+  --delay: 9s;
+  font-size: 9px;
+}
+
+.ending-particles span:nth-child(14) {
+  left: 67%;
+  --duration: 14s;
+  --delay: 10s;
+  font-size: 6px;
+}
+
+.ending-particles span:nth-child(15) {
+  left: 96%;
+  --duration: 12s;
+  --delay: 6s;
+  font-size: 10px;
+}
+
+
+@keyframes endingParticleFloat {
+  0% {
+    transform:
+      translateY(0)
+      translateX(0)
+      scale(0.5);
+
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.45;
+  }
+
+  45% {
+    opacity: 0.3;
+  }
+
+  75% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform:
+      translateY(-110vh)
+      translateX(25px)
+      scale(1);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   EXTRA SPARKLES
+========================================= */
+
+.ending-sparkle {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  color: #d7b06e;
+
+  font-size: 1.3rem;
+
+  text-shadow:
+    0 0 10px rgba(215, 176, 110, 0.5),
+    0 0 25px rgba(215, 176, 110, 0.25);
+}
+
+
+.sparkle-one {
+  top: 18%;
+  left: 27%;
+}
+
+
+.sparkle-two {
+  top: 30%;
+  right: 24%;
+}
+
+
+/* =========================================
+   EXISTING STARS — PREMIUM GLOW
+========================================= */
+
+.ending-star {
+  text-shadow:
+    0 0 8px rgba(210, 171, 109, 0.5),
+    0 0 22px rgba(210, 171, 109, 0.25);
+}
+
+
+/* =========================================
+   TITLE GLOW
+========================================= */
+
+.ending-title {
+  position: relative;
+
+  text-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.25),
+    0 0 35px rgba(220, 185, 120, 0.08);
+}
+
+
+/* =========================================
+   FINAL HEART
+========================================= */
+
+.ending-signature span {
+  display: inline-block;
+
+  animation: finalHeartGlow 3s ease-in-out infinite;
+}
+
+
+@keyframes finalHeartGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 0 rgba(224, 189, 125, 0);
+  }
+
+  50% {
+    text-shadow:
+      0 0 14px rgba(224, 189, 125, 0.35);
+  }
+}
+
+
+/* =========================================
+   ENDING BOTTOM
+========================================= */
+
+.ending-bottom {
+  position: relative;
+}
+
+
+.ending-bottom::before {
+  content: "✦";
+
+  position: absolute;
+
+  left: 50%;
+  top: -32px;
+
+  transform: translateX(-50%);
+
+  color: rgba(201, 166, 109, 0.4);
+
+  font-size: 0.7rem;
+
+  animation: tinyFinalSparkle 3s ease-in-out infinite;
+}
+
+
+@keyframes tinyFinalSparkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .ending-sparkle {
+    font-size: 1rem;
+  }
+
+  .sparkle-one {
+    top: 16%;
+    left: 12%;
+  }
+
+  .sparkle-two {
+    top: 28%;
+    right: 10%;
+  }
+
+  .ending-particles span {
+    font-size: 8px;
+  }
+}
+
+/* Cinematic background video */
+
+.ending-bg-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+  
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.35;
+
+  filter: brightness(0.7) saturate(0.75);
+}
+/* =========================================
+   PROMISE BUTTON
+========================================= */
+
+.promise-trigger {
+  position: relative;
+  z-index: 10;
+
+  margin: 42px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 22px;
+
+  border: 1px solid rgba(211, 172, 109, 0.45);
+  border-radius: 999px;
+
+  background: rgba(35, 29, 23, 0.45);
+
+  color: #d9b77b;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 0 0 rgba(215, 176, 110, 0),
+    inset 0 0 20px rgba(215, 176, 110, 0.03);
+
+  animation: promiseButtonGlow 3s ease-in-out infinite;
+}
+
+.promise-trigger::before {
+  content: "";
+
+  position: absolute;
+  inset: -5px;
+
+  border-radius: inherit;
+
+  border: 1px solid rgba(215, 176, 110, 0.08);
+
+  pointer-events: none;
+}
+
+.promise-trigger:hover {
+  border-color: rgba(224, 189, 125, 0.7);
+
+  background: rgba(55, 43, 31, 0.6);
+
+  color: #f0d49b;
+}
+
+.promise-heart {
+  font-size: 1.25rem;
+
+  animation: promiseHeart 2s ease-in-out infinite;
+}
+
+@keyframes promiseButtonGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 rgba(215, 176, 110, 0),
+      0 0 15px rgba(215, 176, 110, 0.05);
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px rgba(215, 176, 110, 0.14),
+      0 0 45px rgba(215, 176, 110, 0.06);
+  }
+}
+
+@keyframes promiseHeart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+/* =========================================
+   PROMISE OVERLAY
+========================================= */
+
+.promise-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(15, 12, 9, 0.78);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+
+/* =========================================
+   PROMISE CARD
+========================================= */
+
+.promise-card {
+  position: relative;
+
+  width: min(570px, 100%);
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 48px 38px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(60, 49, 38, 0.96),
+      rgba(31, 26, 22, 0.98)
+    );
+
+  border: 1px solid rgba(211, 172, 109, 0.32);
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.55),
+    inset 0 0 60px rgba(210, 171, 109, 0.035);
+}
+
+
+/* Decorative corners */
+
+.promise-card::before,
+.promise-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  border-color: rgba(211, 172, 109, 0.35);
+}
+
+.promise-card::before {
+  top: 15px;
+  left: 15px;
+
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.promise-card::after {
+  right: 15px;
+  bottom: 15px;
+
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+
+/* =========================================
+   PROMISE CONTENT
+========================================= */
+
+.promise-symbol {
+  color: #d8b477;
+
+  font-size: 1.4rem;
+
+  margin-bottom: 18px;
+
+  text-shadow:
+    0 0 15px rgba(216, 180, 119, 0.35);
+}
+
+.promise-label {
+  margin: 0 0 22px;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 5px;
+
+  color: #bfa070;
+}
+
+.promise-card h3 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(2.3rem, 6vw, 3.4rem);
+
+  font-weight: 500;
+
+  color: #fff4df;
+}
+
+.promise-line {
+  width: 75px;
+  height: 1px;
+
+  margin: 25px auto;
+
+  background: #bd9153;
+}
+
+.promise-text {
+  margin: 0 auto 25px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.12rem;
+
+  line-height: 1.85;
+
+  color: #cfc3b4;
+}
+
+.promise-highlight {
+  margin: 28px 0;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 1.9rem;
+
+  line-height: 1.45;
+
+  color: #d5ae70;
+
+  text-shadow:
+    0 0 18px rgba(213, 174, 112, 0.1);
+}
+
+.promise-soft {
+  font-size: 1rem;
+
+  color: #a99b8b;
+}
+
+.promise-question {
+  margin: 34px 0 20px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 2rem;
+
+  color: #e0bd7d;
+}
+
+
+/* =========================================
+   YES BUTTON
+========================================= */
+
+.promise-yes {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 24px;
+
+  border: 1px solid rgba(224, 189, 125, 0.55);
+
+  border-radius: 999px;
+
+  background:
+    rgba(190, 145, 79, 0.12);
+
+  color: #e5c58d;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.promise-yes:hover {
+  background: rgba(190, 145, 79, 0.2);
+
+  border-color: rgba(224, 189, 125, 0.85);
+}
+
+.promise-yes span {
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   ACCEPTED STATE
+========================================= */
+
+.promise-accepted {
+  padding: 5px 0 10px;
+}
+
+.accepted-heart {
+  font-size: 4rem;
+
+  color: #dfbc79;
+
+  margin-bottom: 18px;
+
+  text-shadow:
+    0 0 20px rgba(223, 188, 121, 0.35);
+}
+
+.accepted-text {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.18rem;
+
+  line-height: 1.9;
+
+  color: #d5c8b8;
+
+  margin: 25px 0;
+}
+
+.accepted-final {
+  font-family: "Caveat", cursive;
+
+  font-size: 1.8rem;
+
+  line-height: 1.5;
+
+  color: #d5ae70;
+
+  margin-top: 32px;
+}
+
+.accepted-sign {
+  margin-top: 35px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 1.5rem;
+
+  color: #a99274;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .promise-trigger {
+    margin-top: 35px;
+
+    font-size: 0.98rem;
+
+    padding: 13px 19px;
+  }
+
+  .promise-overlay {
+    padding: 18px;
+  }
+
+  .promise-card {
+    padding: 42px 24px;
+
+    max-height: 88vh;
+  }
+
+  .promise-card h3 {
+    font-size: 2.5rem;
+  }
+
+  .promise-text {
+    font-size: 1.02rem;
+  }
+
+  .promise-highlight {
+    font-size: 1.65rem;
+  }
+
+  .promise-question {
+    font-size: 1.8rem;
+  }
+
+  .accepted-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* =========================================
+   PROMISE CLOSE BUTTON
+========================================= */
+
+.promise-close {
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(211, 172, 109, 0.2);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #bba582;
+
+  font-family: Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.promise-close:hover {
+  color: #f0d39a;
+
+  border-color: rgba(224, 189, 125, 0.55);
+
+  background: rgba(224, 189, 125, 0.08);
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   STORY RESTART BUTTON
+========================================= */
+.rewind-btn {
+  position: absolute;
+
+  right: 28px;
+  bottom: 105px; /* music player paina */
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(211, 172, 109, 0.45);
+
+  background: rgba(25, 21, 17, 0.9);
+
+  color: #d9b77b;
+
+  font-size: 1.4rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(210, 171, 109, 0.1);
+}
+.rewind-btn:hover {
+  color: #f5d89d;
+
+  border-color: rgba(224, 189, 125, 0.8);
+
+  background: rgba(55, 45, 35, 0.95);
+
+  box-shadow:
+    0 0 25px rgba(210, 171, 109, 0.2),
+    0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .rewind-btn {
+    right: 18px;
+    bottom: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.2rem;
+  }
+}

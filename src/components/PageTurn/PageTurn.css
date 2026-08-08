@@ -1,0 +1,182 @@
+.page-turn {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+
+  perspective: 1800px;
+
+  background: #f7ecd7;
+
+  pointer-events: none;
+}
+
+/* BOTH PAGES */
+
+.turn-page {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 50%;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #fffaf0 0%,
+      #f8ecd7 65%,
+      #ead7b8 100%
+    );
+
+  border: 1px solid rgba(177, 132, 70, 0.18);
+
+  box-shadow:
+    inset 0 0 70px rgba(105, 73, 35, 0.08);
+
+  transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+}
+
+/* INNER GOLD BORDER */
+
+.turn-page::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 32px;
+
+  border: 1px solid rgba(177, 132, 70, 0.22);
+}
+
+/* LEFT */
+
+.turn-left {
+  left: 0;
+
+  transform-origin: right center;
+
+  border-right: none;
+}
+
+/* RIGHT */
+
+.turn-right {
+  right: 0;
+
+  transform-origin: left center;
+
+  border-left: none;
+}
+
+/* CENTER SPINE */
+
+.turn-spine {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fffaf0;
+
+  color: #b88645;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(92, 63, 29, 0.12);
+
+  z-index: 5;
+}
+
+.turn-spine::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -14px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(177, 132, 70, 0.16);
+}
+
+/* CENTER LINE */
+
+.page-turn::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(151, 109, 58, 0.25),
+      transparent
+    );
+
+  transform: translateX(-50%);
+}
+
+/* FINAL CLOSE */
+
+.turn-close {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: #c49a5c;
+
+  transform-origin: center;
+
+  opacity: 0.45;
+
+  z-index: 10;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .turn-page::before {
+    inset: 16px;
+  }
+
+  .turn-spine {
+    width: 58px;
+    height: 58px;
+
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,276 @@
+.chapter-five {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 24px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 250, 238, 0.95),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #f8efe2 0%,
+      #f6e8d5 55%,
+      #f1dfc7 100%
+    );
+}
+
+/* Warm atmosphere */
+
+.chapter-five-glow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: rgba(220, 171, 100, 0.16);
+
+  filter: blur(130px);
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: homeGlow 9s ease-in-out infinite;
+}
+
+@keyframes homeGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* Decorations */
+
+.chapter-five-flower {
+  position: absolute;
+
+  color: #b88d58;
+
+  font-size: 2.3rem;
+}
+
+.flower-one {
+  left: 13%;
+  top: 22%;
+
+  animation: flowerFloatOne 6s ease-in-out infinite;
+}
+
+.flower-two {
+  right: 14%;
+  bottom: 21%;
+
+  font-size: 1.7rem;
+
+  animation: flowerFloatTwo 7s ease-in-out infinite;
+}
+
+@keyframes flowerFloatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(12deg);
+  }
+}
+
+@keyframes flowerFloatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(-15deg);
+  }
+}
+
+/* Content */
+
+.chapter-five-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 740px;
+}
+
+/* Number */
+
+.chapter-five-number {
+  margin-bottom: 24px;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 8px;
+
+  color: #a27d4a;
+}
+
+/* Title */
+
+.chapter-five-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3.5rem, 7vw, 6.2rem);
+
+  line-height: 0.91;
+
+  font-weight: 600;
+
+  color: #382f28;
+}
+
+/* Divider */
+
+.chapter-five-divider {
+  margin: 38px auto;
+
+  color: #c1965b;
+
+  font-size: 1rem;
+}
+
+/* Story */
+
+.chapter-five-story {
+  max-width: 660px;
+
+  margin: 0 auto;
+
+  color: #74675a;
+
+  font-size: 1.16rem;
+
+  line-height: 2;
+
+}
+
+.chapter-five-story p {
+  margin-bottom: 24px;
+}
+
+/* Emotional highlight */
+
+.chapter-five-highlight {
+  margin: 38px auto;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.55;
+
+  color: #5d4d3e;
+}
+
+/* Button */
+
+.chapter-five-btn {
+  margin-top: 45px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 30px;
+
+  border: 1px solid rgba(170, 126, 67, 0.5);
+
+  border-radius: 999px;
+
+  background: rgba(255, 250, 240, 0.5);
+
+  color: #85643a;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    gap 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.chapter-five-btn:hover {
+  gap: 18px;
+
+  background: rgba(255, 250, 240, 0.95);
+
+  box-shadow: 0 12px 30px rgba(130, 92, 43, 0.12);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .chapter-five {
+    padding: 75px 22px;
+  }
+
+  .chapter-five-title {
+    font-size: 3.55rem;
+  }
+
+  .chapter-five-story {
+    font-size: 1.04rem;
+    line-height: 1.9;
+  }
+
+  .chapter-five-highlight {
+    font-size: 1.35rem;
+  }
+
+  .flower-one {
+    left: 5%;
+    top: 14%;
+  }
+
+  .flower-two {
+    right: 6%;
+    bottom: 13%;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #b58a4f;
+  animation: chapterFiveCursor 0.8s ease-in-out infinite;
+}
+
+@keyframes chapterFiveCursor {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

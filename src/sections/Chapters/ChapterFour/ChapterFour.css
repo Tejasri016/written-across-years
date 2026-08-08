@@ -1,0 +1,345 @@
+.chapter-four {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 24px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 248, 230, 0.9),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f4eadb 0%,
+      #f7efe3 50%,
+      #f3e6d4 100%
+    );
+}
+
+/* Warm central glow */
+
+.chapter-four-glow {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  border-radius: 50%;
+
+  background: rgba(224, 181, 112, 0.18);
+
+  filter: blur(120px);
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: chapterFourGlow 8s ease-in-out infinite;
+}
+
+@keyframes chapterFourGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* Decorative stars */
+
+.chapter-four-star {
+  position: absolute;
+
+  color: #c19a60;
+
+  font-size: 2rem;
+}
+
+.star-one {
+  top: 22%;
+  left: 16%;
+
+  animation: starFloatOne 5s ease-in-out infinite;
+}
+
+.star-two {
+  right: 17%;
+  bottom: 25%;
+
+  font-size: 1.5rem;
+
+  animation: starFloatTwo 6s ease-in-out infinite;
+}
+
+@keyframes starFloatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(12deg);
+  }
+}
+
+@keyframes starFloatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(10px) rotate(-10deg);
+  }
+}
+
+/* Content */
+
+.chapter-four-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 720px;
+}
+
+/* Number */
+
+.chapter-four-number {
+  margin-bottom: 24px;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 8px;
+
+  color: #a4814e;
+}
+
+/* Title */
+
+.chapter-four-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3.7rem, 7vw, 6.5rem);
+
+  line-height: 0.91;
+
+  font-weight: 600;
+
+  color: #39312a;
+}
+
+/* Divider */
+
+.chapter-four-divider {
+  margin: 38px auto;
+
+  color: #c49b60;
+
+  font-size: 1rem;
+}
+
+/* Story */
+
+.chapter-four-story {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #75695d;
+
+  font-size: 1.16rem;
+
+  line-height: 2;
+}
+
+.chapter-four-story p {
+  margin-bottom: 23px;
+}
+
+/* Highlight */
+
+.chapter-four-highlight {
+  margin-top: 40px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.55;
+
+  color: #635344;
+}
+
+/* Button */
+
+.chapter-four-btn {
+  margin-top: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 28px;
+
+  border: 1px solid rgba(174, 132, 72, 0.5);
+
+  border-radius: 999px;
+
+  background: rgba(255, 250, 240, 0.45);
+
+  color: #87683d;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    gap 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.chapter-four-btn:hover {
+  background: rgba(255, 250, 240, 0.9);
+
+  border-color: #b88a4c;
+
+  gap: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .chapter-four {
+    padding: 75px 22px;
+  }
+
+  .chapter-four-title {
+    font-size: 3.7rem;
+  }
+
+  .chapter-four-story {
+    font-size: 1.04rem;
+
+    line-height: 1.9;
+  }
+
+  .chapter-four-highlight {
+    font-size: 1.35rem;
+  }
+
+  .star-one {
+    left: 7%;
+    top: 14%;
+  }
+
+  .star-two {
+    right: 7%;
+    bottom: 15%;
+  }
+}
+
+/* Cinematic typing cursor */
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #b58a4f;
+  animation: chapterFourCursorBlink 0.8s ease-in-out infinite;
+}
+
+@keyframes chapterFourCursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   MULTIPLE CINEMATIC STARS
+========================================= */
+
+.star-three {
+  top: 18%;
+  left: 18%;
+  font-size: 0.9rem;
+}
+
+.star-four {
+  top: 30%;
+  right: 14%;
+  font-size: 1.1rem;
+}
+
+.star-five {
+  bottom: 24%;
+  left: 12%;
+  font-size: 1.8rem;
+}
+
+.star-six {
+  bottom: 18%;
+  right: 18%;
+  font-size: 0.85rem;
+}
+
+
+/* =========================================
+   MULTIPLE SOFT GLOWS
+========================================= */
+
+.chapter-four-glow {
+  pointer-events: none;
+}
+
+.glow-two {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  top: 15%;
+  left: 5%;
+
+  border-radius: 50%;
+
+  background: rgba(225, 190, 130, 0.10);
+
+  filter: blur(100px);
+}
+
+.glow-three {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+
+  bottom: 5%;
+  right: 0;
+
+  border-radius: 50%;
+
+  background: rgba(190, 160, 120, 0.08);
+
+  filter: blur(120px);
+}
