@@ -103,7 +103,7 @@ and a bond that only gets better with time.`;
   };
 
   return (
-    <section className="ending">
+    <section id="ending" className="ending">
       {/* Cinematic background video */}
       <video
         className="ending-bg-video"

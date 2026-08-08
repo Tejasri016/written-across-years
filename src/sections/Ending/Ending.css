@@ -13,11 +13,11 @@
   text-align: center;
 
   background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(255, 249, 231, 0.95),
-      transparent 34%
-    ),
+   radial-gradient(
+    circle at 50% 35%,
+    rgba(255, 249, 231, 0.28),
+    transparent 30%
+  ),
     linear-gradient(
       180deg,
       #2d2823 0%,

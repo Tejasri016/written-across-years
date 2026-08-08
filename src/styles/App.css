@@ -13,9 +13,7 @@
 
 .chapter-btn,
 .chapter-two-btn,
-.chapter-three-btn,
-.chapter-four-btn,
-.chapter-five-btn {
+.chapter-three-btn{
   position: relative;
   margin-top: 55px;
 
@@ -44,9 +42,7 @@
 
 .chapter-btn::after,
 .chapter-two-btn::after,
-.chapter-three-btn::after,
-.chapter-four-btn::after,
-.chapter-five-btn::after {
+.chapter-three-btn::after {
   content: "";
 
   position: absolute;
